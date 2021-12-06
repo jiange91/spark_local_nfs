@@ -75,7 +75,7 @@ do
 done
 
 
-master_ip=$(gethostip -d master-nfsLan);
+master_ip=$(gethostip -d master);
 echo "export master_ip=$master_ip" | sudo tee -a ~/.bashrc
 echo "export SPARK_MASTER_HOST=$master_ip" | sudo tee -a /usr/local/spark/conf/spark-env.sh;
 echo "export SPARK_LOCAL_IP=$LOCAL_IP" | sudo tee -a /usr/local/spark/conf/spark-env.sh;
